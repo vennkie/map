@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Form</title>
+</head>
+<body style="background-color:black;color: beige;">
+<div style="max-width: 500px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm" action="submit_feedback.php" method="POST">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" placeholder="Your Name" required>
+        
+        <label for="rating">Select your rating:</label>
+        <select id="rating" name="rating" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" required>
+            <option value="" disabled selected>Select Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        
+        <label for="feedback">Enter your feedback:</label>
+        <input type="text" id="feedback" name="feedback" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" placeholder="Type your feedback here..." required>
+        
+        <input type="submit" id="submitBtn" value="Submit" style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
+    </form>
+    <p class="thank-you-message" id="thankYouMessage" style="display: none; color: #007bff; margin-top: 10px;">Thank you for your feedback!</p>
+</div>
+
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('thankYouMessage').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

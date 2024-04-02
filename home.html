@@ -1,65 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>World Map with Cities</title>
     <style>
-        .place{
-            width: 70%;
-            text-align: center;
-        }
-        .column {
-            float: left;
-            width: 33.33%;
-            padding: 10px;
-            height: 100%;
-        }
         body{
-            background-image: url("https://i.pinimg.com/originals/ec/05/db/ec05dbb5deb17a06d30ee83f7b98d3f5.jpg");
+            background-image: url(background.webp);
             background-size: cover;
+            color: black;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         }
-        .main {
-            height: 50%;
+        .out {
             display: flex;
+            justify-content: center;
         }
-        .place{
-            img{
-                width: 90%;
-            }
-            a{
-                color: black;
-            }
+
+        .map-container {
+            padding: 5%;
+        }
+
+        img {
+            height: 70vh;
+        }
+
+        .names {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .btn{
+            
+            height: 40px;
+            width: 120px;
+            background-color: grey;
+
+        }
+        .btn:hover{
+            background-color: lightgrey;
         }
     </style>
 </head>
 <body>
     <center>
-    <h1 style="color: #333;">Welcome, User!!!</h1>
-    <br><br>
-    <div class="main">
-        <div class="column">
-            <div class="place">
-                <img src="https://static.independent.co.uk/2022/08/04/16/iStock-1390081136.jpg?quality=75&width=990&crop=3%3A2%2Csmart&auto=webp" alt="Place 1" style=" margin-right: 10px; vertical-align: middle;">
-                <BR></BR><h1><a href="iceland.html" style="text-decoration: none;">ICELAND</a></h1>
-            </div>
-        </div>
-        <div class="column">
-            <div class="place">
-                <img src="https://s1.picswalls.com/thumbs2/2014/08/08/indonesia-desktop-background_021156399_164.jpg" alt="Place 2" style="  margin-right: 10px; vertical-align: middle;">
-                <BR></BR><h1><a href="place2.html" style="text-decoration: none;">INDONESIA</a></h1>
-            </div>
-        </div>
-        <div class="column">
-            <div class="place">
-                <img src="https://static01.nyt.com/images/2023/06/22/multimedia/22hours-paris-tjzf/22hours-paris-tjzf-master1050.jpg" alt="Place 3" style="margin-right: 10px; vertical-align: middle;">
-                <BR></BR><h1><a href="place3.html" style="text-decoration: none;">PARIS</a></h1>
-            </div>
-        </div>
-    </div>
-    <div class="signout" style="margin-top: 40px;">
-        <button style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; cursor: pointer;" onclick="location.href='main.html';">Sign Out</button>
-    </div>
+        <button class="btn" onclick="window.open('login.html')">Logout</button>
+    
+    <h1>THE WANDERERS</h1>
 </center>
+    <div class="out">
+        <div class="names">
+            <h1><br><br><br>Find these cities.. to explore them</h1>
+            <p>ICELAND <br>PARIS <br>MALDIVES <br>AUSTRALIA <br>USA <br>Ocean</p>
+        </div>
+        <div class="map-container">
+            <img src="papermap.jpg" alt="World Map" usemap="#world-map">
+            <map name="world-map">
+                <area shape="circle" coords="270,118,50" alt="ICELAND" href="iceland.html">
+                <area shape="circle" coords="500,350,50" alt="Marina" href="marina.html">
+                <area shape="circle" coords="350,200,50" alt="PARIS" href="paris.html">
+                <area shape="circle" coords="500,250,50" alt="MALDIVES" href="maldives.html">
+                <area shape="circle" coords="600,350,50" alt="AUSTRALIA" href="australia.html">
+                <area shape="circle" coords="130,200,50" alt="USA" href="america.html">
+            </map>
+        </div>
+        </div>
+        
+    
 </body>
 </html>
