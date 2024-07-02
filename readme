@@ -1,0 +1,39 @@
+Krama
+
+1. Clone the repository and change to the project directory
+
+        ```sh
+        git clone https://github.com/mohanrajvijayan2410/krama.git
+        cd krama
+        ```
+
+        Note: You can download the zip file from the repository and extract it too. Change the current directory to the extracted directory
+
+2. Create a virtual enviroment and activate it.
+        ```sh
+        python -m venv kramaenv
+
+        kramaenv\Scripts\activate
+        ```
+
+3. Install the neccessary modules.
+
+    
+            pip install -r requirements.txt
+        
+
+5. Change directory to your desired folder and run the app.py using "python app.py"
+
+    ```sh
+    cd <sub_folder> 
+    ```
+
+    Replace `<sub_folder>` with one of the following options:
+    - Arthakrama
+    - Pathakrama
+    - Pravarittikrama
+    - Shrutikrama
+
+    6. Kindly refer the the individual README files within each folder for further instructions
+    
+
